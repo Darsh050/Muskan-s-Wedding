@@ -115,10 +115,14 @@ main{container-type:inline-size}
 .hero h1{color:var(--wine)}
 .hero .with{color:#845d27}
 .music-toggle{position:fixed;right:max(14px,env(safe-area-inset-right));bottom:max(14px,env(safe-area-inset-bottom));z-index:21;border:1px solid #d4ac69;border-radius:999px;background:#731e36;color:#fff5df;padding:10px 15px;min-height:44px;font:500 13px Jost,sans-serif;cursor:pointer;box-shadow:0 2px 10px #35101b33}
-.rsvp{padding-top:45px;border-top:1px solid #b08a4355}
-.rsvp h2{margin-bottom:12px}
-.rsvp-contacts{display:grid;gap:12px;width:max-content;max-width:100%;margin:22px auto 0;padding:0;list-style:none;font-size:clamp(19px,3.2cqw,25px);line-height:1.3;color:var(--ink)}
-.rsvp-contacts li{display:flex;flex-wrap:wrap;justify-content:center;column-gap:.6em;row-gap:2px}
+.rsvp{position:relative;padding:52px 28px 60px;background:var(--cream) url('invitation-paper.svg') repeat}
+.rsvp::before{content:'';position:absolute;inset:12px;border:1px solid #b08a4370;pointer-events:none}
+.rsvp h2{font-size:clamp(36px,6.4cqw,50px);margin:0;color:var(--wine)}
+.rsvp .divider{margin:16px auto}
+.rsvp-hosts,.rsvp-contacts{display:grid;gap:8px;max-width:100%;margin:0 auto;padding:0;list-style:none;font-size:clamp(19px,3.2cqw,25px);line-height:1.25;color:var(--ink)}
+.rsvp-hosts{font-style:italic}
+.rsvp h3{margin:0 0 15px;color:var(--wine);font-size:clamp(24px,4cqw,32px);letter-spacing:.09em}
+.rsvp-contacts li{display:flex;flex-wrap:wrap;justify-content:center;gap:2px .6em}
 .rsvp-contacts strong{font-weight:600}
 .rsvp-contacts a{color:var(--wine);white-space:nowrap;text-decoration-color:#b08a43;text-underline-offset:3px}
 .entrance .card-invocation{font-size:min(2.6vw,1.45svh);line-height:1.2;font-weight:700}.hero .invocation{font-size:clamp(13px,2.3cqw,17px);font-weight:700;margin:0 0 10px}.ceremony .event-ganesh{position:relative;width:clamp(46px,10cqw,76px);margin:0 auto 14px}</style></head><body class="locked"><div class="petals" id="petals" aria-hidden="true"></div><div class="entrance" id="entrance" role="dialog" aria-modal="true" aria-label="Wedding invitation"><div class="envelope-stage"><img class="scene-art" src="envelope-front.png" alt="Floral burgundy envelope surrounded by marigolds and hanging bells"><div class="envelope-lining" aria-hidden="true"></div><div class="invitation-letter" aria-hidden="true"><span class="card-invocation">Shree Ganeshaye Namah</span><span class="script card-hosts">Mr. Vinod Kumar &amp; Mrs. Koshelia</span><span class="label card-invite">Cordially invite you to<br>the wedding of their beloved daughter</span><span class="script card-names">Muskan Kumari</span><span class="card-and">and</span><span class="script card-names">Sanjay Kumar</span><span class="label card-invite">S/O Dr Shamdas Rathi &amp;<br>Mrs Rameela Shamdas</span><span class="letter-date">2 December 2026</span></div><svg class="folded-pocket" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"><defs><pattern id="floral-fold" width="100" height="100" patternUnits="userSpaceOnUse"><image href="envelope-floral-hd.png" x="0" y="0" width="100" height="100" preserveAspectRatio="none"/></pattern></defs><path d="M0 0L53 52L0 100Z M100 0L47 52L100 100Z" fill="url(#floral-fold)"/><path d="M0 100L50 49L100 100Z" fill="url(#floral-fold)"/><path d="M0 0L50 50L100 0 M0 100L50 49L100 100" fill="none" stroke="#c5a16d" stroke-width=".3"/></svg><div class="envelope-hinge" aria-hidden="true"><div class="flap-front"></div><div class="flap-back"></div></div><button class="wax-button" id="open" aria-label="Tap the M and S wax seal to open the invitation"><span>Tap to open</span></button></div></div>
@@ -135,15 +139,22 @@ main{container-type:inline-size}
 <section class="families"><p class="label">Together with</p><h2 class="script">Our families</h2><div class="divider">❀</div><div class="family-grid"><article><h3 class="label">Bride's family</h3><p>Mr. Vinod Kumar<br>Mrs. Koshelia</p></article><article><h3 class="label">Groom's family</h3><p>Dr Shamdas Rathi<br>Mrs Rameela Shamdas</p></article></div></section>
 <section class="closing"><h2 class="script">Awaiting your gracious presence</h2><p>Your presence and blessings will make our special day all the more memorable.</p><div class="divider">❀</div><p class="signature script">Lalwani Pariwaar<br>&amp;<br>Rathi Pariwaar</p></section>
 <section class="our-story" id="our-story" aria-labelledby="story-title"><p class="label">Two hearts. One beautiful journey.</p><h3 class="story-meet script" id="story-title">Meet the Bride &amp; Groom</h3><p class="story-note">Tap either portrait to read their story.</p><div class="story-grid"><details class="story-person groom"><summary><span class="story-portrait"><svg viewBox="135 392 360 360" role="img" aria-label="Sanjay" xmlns="http://www.w3.org/2000/svg"><image href="our-story.jpg" width="1024" height="1536"/></svg></span><span class="script">The Groom</span><small>MEET SANJAY +</small></summary><p>A Marvel geek with a brave soul and a heart of gold. You’ll always find him planning the next adventure, one caffeine run at a time.</p></details><details class="story-person bride"><summary><span class="story-portrait"><svg viewBox="534 392 348 348" role="img" aria-label="Muskan" xmlns="http://www.w3.org/2000/svg"><image href="our-story.jpg" width="1024" height="1536"/></svg></span><span class="script">The Bride</span><small>MEET MUSKAN +</small></summary><p>Type A personality who carries little fun facts with her everywhere she goes. You’ll always find her turning every adventure into a story worth telling.</p></details></div><details class="story-together"><summary>♡ &nbsp; Open our next chapter</summary><p class="script">Together, they bring out the best in each other — and are ready to take on forever.</p><p class="label">Muskan &amp; Sanjay · 2 December 2026</p></details></section>
-<section class="closing rsvp" id="rsvp" aria-labelledby="rsvp-title">
-  <h2 class="script" id="rsvp-title">RSVP</h2>
+<section class="closing rsvp" id="rsvp" aria-labelledby="rsvp-welcome">
+  <h2 class="script" id="rsvp-welcome">Awaiting to welcome you</h2>
   <div class="divider" aria-hidden="true">❀</div>
-  <ul class="rsvp-contacts">
-    <li><strong>Prof. Pharsram</strong><a href="tel:+923332253604">0333 2253604</a></li>
-    <li><strong>Dr. Greesh Kumar</strong><a href="tel:+923332964505">03332964505</a></li>
+  <ul class="rsvp-hosts">
+    <li>Prof. Pharsram</li>
+    <li>Dr. Greesh Kumar</li>
+    <li>Vinod Kumar</li>
+    <li>Kamlesh Kumar Rathi</li>
+  </ul>
+  <div class="divider" aria-hidden="true">❀</div>
+  <h3 id="rsvp-title">RSVP</h3>
+  <ul class="rsvp-contacts" aria-labelledby="rsvp-title">
     <li><strong>Engr. Prem Kumar</strong><a href="tel:+923332157416">03332157416</a></li>
-    <li><strong>Vinod Kumar</strong><a href="tel:+923333005759">03333005759</a></li>
     <li><strong>Bharat Kumar</strong><a href="tel:+923333443602">03333443602</a></li>
+    <li><strong>Bharat Rathi</strong><a href="tel:+923332977332">0333 2977332</a></li>
+    <li><strong>Mukesh Rathi</strong><a href="tel:+923332977708">0333 2977708</a></li>
   </ul>
 </section>
 <footer class="label">With love · 2 December 2026 · Karachi</footer><button type="button" class="music-toggle" id="music-toggle" hidden>Play music</button></main><script type="application/octet-stream" id="wedding-track">
